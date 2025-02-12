@@ -22,6 +22,39 @@ const listartodos = async (req, res) => {
   }
 };
 
+const nuevo = async (req, res) => {
+  // llega el objeto en el boddy del request
+  let datos = {
+    nombre: req.body.nombre,
+    descripcion: req.body.descripcion,
+    imagen: req.body.imagen,
+    marca: req.body.marca,
+    precio: req.body.precio,
+    existencia: req.body.existencia,
+    rating: req.body.rating,
+    numRevisiones: req.body.numRevisiones,
+    estaOfertado: req.body.estaOfertado,
+  };
+  try {
+    // instancia del modelo producto (collection)
+    const productoNuevo = new producto(datos);
+    productoNuevo.save(); // * Este metodo es el que escribre en el mongo
+
+    // creamos en nuevo documento ( que agregamos a la colletion)
+
+    return res.send({
+      estado: true,
+      mensaje: "insercion exitosa",
+    });
+  } catch (error) {
+    return res.send({
+      estado: false,
+      mensaje: `ha ocurrido un error en la consulta ${error}`,
+    });
+  }
+};
+
 module.exports = {
   listartodos,
+  nuevo,
 };

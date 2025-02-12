@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-// llamamos la libreria de conexion
+//  llamamos la libreria de conexion
 const conexion = require("./models/bd_conexion.js");
 conexion();
 
