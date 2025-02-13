@@ -12,9 +12,10 @@ conexion();
 
 // rutas globales de la app
 const productoRuta = require("./routes/productos.js");
-
+const usuariosRuta = require("./routes/usuarios.js");
 // usamos la rutas
 app.use("/api", productoRuta);
+app.use("/api", usuariosRuta);
 
 app.listen(4000, () => {
   console.log(`listen en el puerto ${4000}`);
