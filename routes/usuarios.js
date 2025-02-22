@@ -10,8 +10,8 @@ const usuarioCtr = require("../controllers/usuarios");
 
 router.get("/usuarios/listartodos", usuarioCtr.listartodos);
 router.post("/usuarios/nuevo", usuarioCtr.nuevo);
-/* router.get("/usuarios/buscarxid/:id", usuarioCtr.buscarxid);
-router.delete("/usuarios/borrarxid/:id", usuarioCtr.borrarxid); */
+router.get("/usuarios/buscarxid/:id", usuarioCtr.buscarxid);
+router.delete("/usuarios/borrarxid/:id", usuarioCtr.borrarxid);
 router.put("/usuarios/actualizarxid/:id", usuarioCtr.actualizarxid);
 // .....
 module.exports = router;

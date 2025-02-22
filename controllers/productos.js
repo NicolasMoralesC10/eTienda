@@ -108,7 +108,7 @@ const buscarxid = async (req, res) => {
     let consulta = await producto.findById(id).exec();
     return res.send({
       estado: true,
-      mensaje: "insercion exitosa !",
+      mensaje: "Consulta exitosa !",
       consulta,
     });
   } catch (error) {
