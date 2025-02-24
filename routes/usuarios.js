@@ -9,6 +9,7 @@ const usuarioCtr = require("../controllers/usuarios");
 // * rutas que entregara el modulo productos
 
 router.get("/usuarios/listartodos", usuarioCtr.listartodos);
+router.post("/usuarios/login", usuarioCtr.login);
 router.post("/usuarios/nuevo", usuarioCtr.nuevo);
 router.get("/usuarios/buscarxid/:id", usuarioCtr.buscarxid);
 router.delete("/usuarios/borrarxid/:id", usuarioCtr.borrarxid);

@@ -21,7 +21,16 @@ const listartodos = async (req, res) => {
     });
   }
 };
-
+/** 
+@description funcion para crear un nuevo producto
+@function nuevo
+@param {Object} req - request con la data del formulario de registro del producto
+@param {Object} res - response falso si no exite el producto, true y mensaje de exito si se crea el producto
+@author Mora
+@version 1.0
+@returns {Object} - estado y mensaje de la operacion
+@class productos
+*/
 const nuevo = async (req, res) => {
   // llega el objeto en el boddy del request
   let datos = {

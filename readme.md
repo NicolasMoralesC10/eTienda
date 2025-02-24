@@ -11,7 +11,7 @@
 
 
 1- creamos las carpetas para el MVC (controllers,models,routers)
-2- instalamos los paquetes basicos : npm i nodemon express cors mongoose 
+2- instalamos los paquetes basicos : npm i nodemon express cors mongoose bcryptjs(encriptacion)  jsonwebtoken(tokens) multer(imagenes)
 
 * documentacion de MONGO
 - MongoDB : https://www.mongodb.com/docs/manual/reference/method/
